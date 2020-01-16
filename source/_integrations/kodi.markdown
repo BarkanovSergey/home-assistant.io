@@ -148,7 +148,7 @@ media_player:
   - platform: kodi
     host: 192.168.0.123
     turn_off_action:
-      service: kodi.call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.kodi
         method: Application.Quit
@@ -161,8 +161,8 @@ media_player:
   - platform: kodi
     host: 192.168.0.123
     turn_off_action:
-      service: kodi.call_method
-      data:
+    -  service: kodi.call_method
+       data:
         entity_id: media_player.kodi
         method: System.Hibernate
 ```
@@ -174,7 +174,7 @@ media_player:
   - platform: kodi
     host: 192.168.0.123
     turn_off_action:
-      service: kodi.call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.kodi
         method: System.Suspend
@@ -187,7 +187,7 @@ media_player:
   - platform: kodi
     host: 192.168.0.123
     turn_off_action:
-      service: kodi.call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.kodi
         method: System.Reboot
@@ -200,7 +200,7 @@ media_player:
   - platform: kodi
     host: 192.168.0.123
     turn_off_action:
-      service: kodi.call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.kodi
         method: System.Shutdown
@@ -215,7 +215,7 @@ media_player:
   - platform: kodi
     host: 192.168.0.123
     turn_on_action:
-      service: kodi.call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.kodi
         method: Addons.ExecuteAddon
